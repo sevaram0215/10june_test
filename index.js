@@ -16,6 +16,7 @@ let arr=JSON.parse(localStorage.getItem("user")) ||[]
     arr.push(obj)
     localStorage.setItem("user",JSON.stringify(arr));
     displaydata(arr);
+    alert("Thanks for Submit")
     form.reset();
 
  }
