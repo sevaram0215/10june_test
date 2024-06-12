@@ -5,6 +5,9 @@ height: auto;
 width: 99%;
 margin: auto;
 /* border: 2px solid red; */
+position: sticky;
+top:0;
+z-index: 5;
 display: flex;
 justify-content: space-between;
 background-color: rgba(216, 195, 214, 0.831);
@@ -89,7 +92,7 @@ span{
  
 #Form_table_div{
     width: 100%;
-    border: 2px solid green;
+    /* border: 2px solid; */
     display: flex;
     margin-bottom: 30px;
     justify-content: space-between;
@@ -114,7 +117,7 @@ form{
     width: 50%;
     margin: auto;
      padding: 40px;
-    border: 2px solid rgb(104, 104, 222);
+    border: 2px solid rgb(142, 142, 225);
     box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
     margin-bottom: 30px;
 }
@@ -142,6 +145,8 @@ form{
 }
 h1{
   text-align: center;
+  /* border: 2px solid red; */
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
 }
 input,select{
     width: 95%;
@@ -166,7 +171,8 @@ margin-top: 20px;
     width: 50%;
     font-size: 20px;
     margin-top: 10px;
-   
+    margin-bottom: 10px;
+   /* border: 2px solid red; */
     box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
 }
 h2{
@@ -181,12 +187,16 @@ table,th,td{
     margin: auto;
     
 }
+thead{
+  background-color: red;
+}
 td{
   padding: 10px;
 }
-thead {
+/* thead {
     background-color: rgb(37, 200, 16);
-}
+    border: 2px solid red;
+} */
 tr:nth-child(odd){
     background-color: rgb(191, 230, 230);
 }
@@ -330,7 +340,7 @@ footer {
 
 #Form_table_div{
   width: 100%;
-  border: 2px solid green;
+  /* border: 2px solid green; */
   display: block;
   margin-bottom: 30px;
    
@@ -353,7 +363,7 @@ select{
   font-size: 11px;
   margin-top: 30px;
 font-weight: bold;
-  border: 2px solid rgb(17, 200, 63);
+  /* border: 2px solid rgb(17, 200, 63); */
 }
 table,th,td{
   border: 2px solid;
@@ -366,13 +376,13 @@ footer form {
   width: 72%;
   margin: auto;
   margin-top: 20px;
-  border: 2px solid rgb(13, 24, 241);
+  /* border: 2px solid rgb(13, 24, 241); */
 }
   }
   @media screen and (min-width: 758px) and (max-width: 1024px){
     #Form_table_div{
       width: 100%;
-      border: 2px solid green;
+      /* border: 2px solid green; */
       display: block;
       margin-bottom: 30px;
        
