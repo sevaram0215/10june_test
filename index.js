@@ -42,14 +42,16 @@ let arr=JSON.parse(localStorage.getItem("user")) ||[]
     th5.innerHTML=("Date of birth")
     let th6=document.createElement("th")
     th6.innerHTML=("Course")
-    table_row.append(th1,th2,th3,th4,th5,th6,)
+    let th7=document.createElement("th")
+    th7.innerHTML=("Action")
+    table_row.append(th1,th2,th3,th4,th5,th6,th7)
     thead.append(table_row)
     disply_table.innerHTML=null
     user.forEach((element,index)=> {
-        index++
+        
         let tr1=document.createElement("tr")
         let td1=document.createElement("td")
-        td1.innerHTML=index
+        td1.innerHTML=index+1
         let td2=document.createElement("td")
         td2.innerText=element.name
         let td3=document.createElement("td")
@@ -60,14 +62,40 @@ let arr=JSON.parse(localStorage.getItem("user")) ||[]
         td5.innerText=element.dob
         let td6=document.createElement("td")
         td6.innerText=element.Course
-        tr1.append(td1,td2,td3,td4,td5,td6)
+
+        let td7=document.createElement("td")
+        let add=document.createElement("button")
+        add.innerHTML="Add to cart"
+        add.addEventListener("click", ()=>{
+addValue('favData',element)
+alert("data add to fav")
+        });
+        let del=document.createElement("button")
+        del.innerHTML="Delete"
+        del.addEventListener("click",()=>{
+            deleteData(arr, index)  
+ displaydata(arr)
+            alert("delete data successfully")           
+        });
+td7.append(add,del)
+        tr1.append(td1,td2,td3,td4,td5,td6,td7)
         tbody.append(tr1)
         table.append(thead,tbody);
         disply_table.append(h2,table)
 
     })
 
-
-
  }
+//  ***********Add Function***************
+function addValue(key, value){
+    let newArr = JSON.parse(localStorage.getItem('favData')) || [];
+    newArr.push(value);
+    localStorage.setItem('favData', JSON.stringify(newArr));
+}
+// ***********delete function*********************
+function deleteData(seva, index){
+    seva.splice(index, 1)
+    localStorage.setItem('user', JSON.stringify(seva));
+}
+
  displaydata(arr)
